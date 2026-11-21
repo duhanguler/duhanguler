@@ -1,40 +1,61 @@
-# Hi, I'm Duhan Güler 👋
+# Duhan Güler
 
-**Software Engineer — Backend, Systems & AI**
-
-I build production backend services, web platforms, cross-platform system agents, and AI/media processing pipelines — primarily with **Python (FastAPI, Flask, Django)**, **Go**, **PostgreSQL/MariaDB**, and **TypeScript**.
-
-Most of my commercial and enterprise work lives in private repositories under NDA; I'm actively building public open-source infrastructure & developer tools in **Go** and **Python** — including **[pgveil](https://github.com/duhanguler/pgveil)** (zero-trust PostgreSQL wire-protocol PII masking, AST Virtual RLS & AI-agent SQL firewall proxy) and **[flask-lens](https://github.com/duhanguler/flask-lens)** (real-time SQL/N+1 profiler, EXPLAIN analyzer, cProfile SVG flamegraph & pytest query-budget guardrails for Flask).
-
----
-
-### Selected Work
-
-| Project | Domain | Stack | Highlights |
-|---|---|---|---|
-| **[pgveil](https://github.com/duhanguler/pgveil)** *(Open Source)* | Database Security & AI Infrastructure | Go, PostgreSQL Wire v3, PG17 AST, Virtual RLS, Kafka, Kubernetes, Helm, OpenTelemetry, React, TypeScript | Zero-trust PostgreSQL wire proxy & native MCP server: 8-pack dynamic PII masking (`25k TPS`, `+0.25ms`), AST Virtual Row-Level Security (`Deparse`), CTE taint & side-channel oracle guard, live HITL holds, zero-config `pgveil demo` & `pgveil init`, and Homebrew tap. |
-| **[flask-lens](https://github.com/duhanguler/flask-lens)** *(Open Source)* | Developer Tools & Python Observability | Python 3.10+, Flask, SQLAlchemy, cProfile, SQLite WAL, SSE, Pytest Plugin, PEP 561 Strict | Two-line Flask DevTools console (`/__lens`) for JSON APIs, HTMX & webhooks (`+0.17ms` SQLAlchemy overhead): automatic SQL N+1 detection with `file:line`, read-only `EXPLAIN` analyzer, zoomable `cProfile` SVG flamegraph, request replay/diff, secret redaction & `assert_num_queries` pytest CI guardrails. |
-| **AI Media Post-Production & GPU Worker Platform** *(Private)* | AI & Media Systems | Python, FastAPI, PyTorch, WhisperX, FFmpeg, React, TypeScript, Redis, PostgreSQL, Docker | Automated speech enhancement & silence cutting, frame-accurate Premiere Pro / DaVinci Resolve XMEML exports, cached 18 TB NAS gateway, and GPU worker pipeline. |
-| **Multi-Tenant AI Video Dubbing & Clipping SaaS** *(Private)* | Multi-Tenant SaaS & AI | Python, Flask, PostgreSQL, Vue 3, RunPod GPU, Demucs, WhisperX, ONNX, FFmpeg, Docker | 11-language synchronized video dubbing & clipping; single-container GPU analysis (<20s for 10-min video), voiceprint matching, SSE job tracking, and 6-tier RBAC. |
-| **Enterprise IT Asset Management & Go Endpoint Agent** *(Private)* | Systems & ITAM | Go, PostgreSQL, REST API, SHA-256, S.M.A.R.T. | Cross-platform single-binary agent (<20 MB RAM) for Windows/Linux/macOS with hardware tamper fingerprinting, SCD Type 2 custody history, and atomic self-updates. |
-| **Live Database Backup & Ransomware Protection Engine** *(Private)* | Systems & Security | Windows VSS, SQL, AES-256, S3/R2/B2, SFTP/SMB | Live database snapshotting (MSSQL/MySQL/PostgreSQL), decoy-file ransomware halt detection, encrypted 3-2-1 multi-cloud replication, and integrity verification. |
-| **National Association ERP, Billing & Job Marketplace** *(Private)* | Enterprise Web (Flask) | Python, Flask, SQLAlchemy, Alembic, MariaDB, Fernet, WeasyPrint, Nginx | 47-table membership ERP with application-layer PII encryption, HMAC-verified payment callbacks, automated PDF CV exports, and a two-sided hiring portal. |
-| **Customs & Bonded Warehouse Management System (WMS)** *(Private)* | Logistics & ERP | Web WMS, Barcode/QR, Android Handhelds, ERP / E-Invoice | 3D rack/bin addressing for customs-bonded and free-storage zones, gate/weighbridge kiosk integration, statutory customs registers, and ERP e-invoice billing. |
-| **[Optical Mark Recognition (OMR) Engine](https://github.com/duhanguler/omr)** *(Open Source)* | Computer Vision | Python, OpenCV, NumPy, Pandas, JSON Schema, Pytest | Open-source exam sheet grading engine for scanners & mobile cameras; field-tested at 220+ sheets/min with declarative JSON Schema layouts. |
-
----
-
-### Tech Stack
-
-* **Backend & Web:** Python · FastAPI · Flask · Django · Go · SQLAlchemy · Alembic · REST / SSE
-* **Data & Streaming:** PostgreSQL · MariaDB / MySQL · SQLite WAL · Apache Kafka / Redpanda · Redis · S3 / Cloudflare R2 / Backblaze B2
-* **AI, Media & Vision:** PyTorch (CUDA / MPS) · OpenCV · WhisperX · ONNX · FFmpeg · LLM APIs / MCP
-* **Frontend:** TypeScript · React · Vue 3 · Pinia · Tailwind CSS
-* **Infrastructure, Observability & Security:** Docker · Kubernetes · Helm · OpenTelemetry · Prometheus · cProfile · Pytest · Linux · Nginx · GitHub Actions · AES-256 / Fernet
-
----
-
-### Connect
+**Software Engineer — Backend, Systems, Database Security & AI Infrastructure**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-duhanguler-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/duhanguler)
 [![GitHub](https://img.shields.io/badge/GitHub-duhanguler-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/duhanguler)
+[![PyPI - omrkit](https://img.shields.io/pypi/v/omrkit?style=flat-square&label=PyPI%20%7C%20omrkit&color=0D7A52&logo=pypi&logoColor=white)](https://pypi.org/project/omrkit/)
+[![Homebrew Tap](https://img.shields.io/badge/Homebrew-duhanguler%2Ftap-FBB040?style=flat-square&logo=homebrew&logoColor=black)](https://github.com/duhanguler/homebrew-tap)
+
+I design and build high-throughput backend systems, database wire-protocol proxies, developer observability & operations tooling, cross-platform endpoint agents, and AI/vision pipelines — primarily in **Python (FastAPI, Flask, Django)**, **Go**, **PostgreSQL**, and **TypeScript**.
+
+Alongside private enterprise and commercial platforms built under NDA, I author open-source infrastructure and contribute upstream across the Python web, security, and AI ecosystems.
+
+---
+
+### Open-Source Projects & Developer Tooling
+
+| Project | Domain | Stack | Engineering Highlights |
+|---|---|---|---|
+| **[pgveil](https://github.com/duhanguler/pgveil)** (`v0.4.0`) | Database Security & AI Agent Firewall | Go, PostgreSQL Wire v3, PG17 AST (`pg_query_go`), Virtual RLS, MCP, Kafka, Helm/K8s, OpenTelemetry, React | Zero-trust PostgreSQL wire proxy & native MCP server: 8-pack dynamic PII masking (`25k TPS`, `+0.25ms` latency), AST Virtual Row-Level Security (`Deparse`), CTE taint & side-channel oracle defense, live HITL execution holds, zero-config `pgveil demo`, and [Homebrew tap](https://github.com/duhanguler/homebrew-tap). |
+| **[flask-deck](https://github.com/duhanguler/flask-deck)** (`v0.3.0`) | Enterprise Admin & Operations Workbench | Python 3.10+, Flask, SQLAlchemy 2.0, Strict Nonce CSP, Keyset Pagination, TOTP/OIDC, S3, SSE | Fail-closed admin & operations platform (`23.6 KB` gzip total, zero Node build / zero CDN, `0 'unsafe-inline'`): pure-Python RFC 6238 TOTP 2FA & SVG QR generator, PKCE `S256` OIDC SSO, HMAC keyset cursor pagination, S3/local media proxy with magic-byte & decompression-bomb guards, native RTL/i18n (`en`/`tr`/`de`/`ar`), soft-delete trash, revision diffs, live SSE background jobs, interactive schema ERD, Kanban & pure SVG analytics. |
+| **[flask-lens](https://github.com/duhanguler/flask-lens)** | Python Observability & Query Guardrails | Python 3.10+, Flask, SQLAlchemy, `cProfile`, SQLite WAL, SSE, Pytest Plugin, PEP 561 Strict | Two-line Flask DevTools console (`/__lens`) for JSON APIs, HTMX & webhooks (`+0.17ms` SQLAlchemy overhead): automatic SQL N+1 detection with `file:line` callsite attribution, read-only `EXPLAIN` analyzer, zoomable `cProfile` SVG flamegraph, request replay/diff, secret redaction, and Django-style `assert_num_queries` pytest CI guardrails. |
+| **[OMRKit (`omr`)](https://github.com/duhanguler/omr)** (`v2.3.1`) | Computer Vision & EdTech Platform | Python, OpenCV, NumPy, FastAPI, React, TypeScript, ArUco, QR v3, Docker ([PyPI](https://pypi.org/project/omrkit/) · [Live Studio](https://omrkit-studio.onrender.com/)) | Zero-calibration Optical Mark Recognition engine & 6-language Web Studio: 3-of-4 occluded ArUco 12-point homography recovery, `OMRKIT:v3` QR auto-templating, class-roster mail-merge PDFs, zero-JSON teacher key-sheet scanning, darkness-dominance smudge filtering, Classical Test Theory psychometrics (item difficulty, discrimination & KR-20), Moodle/Canvas LMS exports, and live camera scanner. |
+
+---
+
+### Upstream Open-Source Contributions
+
+| Repository | Ecosystem | Contributions & Technical Scope |
+|---|---|---|
+| **[brekkylab/backlot](https://github.com/brekkylab/backlot)** | FastAPI / AI Agent Evaluation Twin | [#1438](https://github.com/brekkylab/backlot/pull/1438) *(Merged)* — Exact leading-integer & decimal-exponent path parsing across 9 numeric GitHub REST routes verified against live `api.github.com`.<br>[#1447](https://github.com/brekkylab/backlot/pull/1447) — Unserved GitHub search query/repository validation (`422 Validation Failed` via `odata.strip_blanks`), API version echo & `search` rate-limit accounting ahead of credential checks. |
+| **[pallets-eco/flask-admin](https://github.com/pallets-eco/flask-admin)** | Pallets / Flask Ecosystem | [#3006](https://github.com/pallets-eco/flask-admin/pull/3006) *(Approved)* — Stop `BaseView._run_view` from masking internal `TypeError` exceptions or double-invoking view methods.<br>[#3005](https://github.com/pallets-eco/flask-admin/pull/3005) — Handle context-sensitive SQLAlchemy column default callables during form scaffolding. |
+| **[pallets-eco/flask-security](https://github.com/pallets-eco/flask-security)** | Pallets / Flask Security & Auth | [#1329](https://github.com/pallets-eco/flask-security/pull/1329) — Security hardening (`#1317`): automatically purge multi-factor recovery codes when 2FA is disabled or the last secondary WebAuthn credential is deleted across all 5 ORM datastores. |
+| **[authlib/authlib](https://github.com/authlib/authlib)** | OAuth 2.0 / OIDC (Flask & Django) | [#1077](https://github.com/authlib/authlib/pull/1077) — Resolve OAuth 2.0 scopes once at the grant/endpoint validation boundary (`BaseGrant.resolve_scope`, `DeviceAuthorizationEndpoint`, `IDJAGGrant`) instead of re-expanding empty resolved scopes inside token generators. |
+| **[strawberry-graphql/strawberry-django](https://github.com/strawberry-graphql/strawberry-django)** | Django / GraphQL ORM Optimizer | [#1001](https://github.com/strawberry-graphql/strawberry-django/pull/1001) — Isolate `perm_context` during queryset optimization so `HasRetvalPerm` checkers do not leak into nested relation prefetches or prematurely mark parent permission contexts safe. |
+| **[wemake-services/django-modern-rest](https://github.com/wemake-services/django-modern-rest)** | Django / Type-Safe REST & OpenAPI | [#1856](https://github.com/wemake-services/django-modern-rest/pull/1856) & [#1857](https://github.com/wemake-services/django-modern-rest/pull/1857) — Support lazy translated routes (`i18n_patterns` / `_PrefixRoutePattern`) and key router OpenAPI path metadata by full `PatternChain`. |
+| **[maldoinc/wireup](https://github.com/maldoinc/wireup)** | Dependency Injection (FastAPI / Django / Flask) | [#157](https://github.com/maldoinc/wireup/pull/157) — Actionable `UnknownServiceRequestedError` diagnostics with equal-weight class/factory `@injectable` remediation snippets and registered qualifier inspection. |
+
+---
+
+### Selected Enterprise & Production Systems *(Private / NDA)*
+
+| System | Domain | Stack | Architecture & Production Highlights |
+|---|---|---|---|
+| **AI Media Post-Production & GPU Worker Platform** | AI & Media Systems | Python, FastAPI, PyTorch, WhisperX, FFmpeg, React, TypeScript, Redis, PostgreSQL, Docker | Automated speech enhancement & silence cutting, frame-accurate Premiere Pro / DaVinci Resolve XMEML timeline exports, cached 18 TB NAS media gateway, and distributed GPU worker pipeline. |
+| **Multi-Tenant AI Video Dubbing & Clipping SaaS** | Multi-Tenant SaaS & AI | Python, Flask, PostgreSQL, Vue 3, RunPod GPU, Demucs, WhisperX, ONNX, FFmpeg, Docker | 11-language synchronized video dubbing & clipping; single-container GPU analysis (<20s per 10-min video), speaker voiceprint matching, real-time SSE job tracking, and 6-tier RBAC. |
+| **Enterprise IT Asset Management & Go Endpoint Agent** | Systems & ITAM | Go, PostgreSQL, REST API, SHA-256, S.M.A.R.T. | Cross-platform single-binary endpoint agent (<20 MB RAM) for Windows, Linux & macOS with hardware tamper fingerprinting, SCD Type 2 custody history, and atomic Ed25519/SHA-256 self-updates. |
+| **Live Database Backup & Ransomware Protection Engine** | Systems & Security | Windows VSS, SQL, AES-256, S3/R2/B2, SFTP/SMB | Live volume & database snapshotting (MSSQL, MySQL, PostgreSQL), canary decoy-file ransomware halt detection, encrypted 3-2-1 multi-cloud replication, and automated restore verification. |
+| **National Association ERP, Billing & Job Marketplace** | Enterprise Web (Flask) | Python, Flask, SQLAlchemy, Alembic, MariaDB, Fernet, WeasyPrint, Nginx | 47-table membership ERP with application-layer PII encryption, HMAC-verified payment callbacks, automated PDF dossier/CV generation, and a two-sided hiring marketplace. |
+| **Customs & Bonded Warehouse Management System (WMS)** | Logistics & ERP | Web WMS, Barcode/QR, Android Handhelds, ERP / E-Invoice | 3D rack/bin addressing across customs-bonded and free-storage zones, gate/weighbridge kiosk integration, statutory customs ledgers, and automated ERP e-invoice billing. |
+
+---
+
+### Technical Stack
+
+* **Backend & Web Frameworks:** Python · FastAPI · Flask · Django · Go · SQLAlchemy 2.0 · Alembic · Strawberry GraphQL · REST / Server-Sent Events (SSE)
+* **Databases, Storage & Streaming:** PostgreSQL (Wire Protocol v3, PG17 AST, JSONB, Keyset Pagination) · MariaDB / MySQL · SQLite WAL · Apache Kafka / Redpanda · Redis · S3 / Cloudflare R2 / Backblaze B2
+* **Security & Identity:** OAuth 2.0 / OpenID Connect (PKCE) · WebAuthn / Passkeys · RFC 6238 TOTP · AST SQL Firewalls & Virtual RLS · Strict Nonce CSP · AES-256 / Fernet
+* **AI, Media & Computer Vision:** PyTorch (CUDA / MPS) · OpenCV (ArUco, Homography) · WhisperX · Demucs · ONNX · FFmpeg · Model Context Protocol (MCP)
+* **Frontend & UI Engineering:** TypeScript · React · Vue 3 · Pinia · Tailwind CSS · Accessible SSR / Zero-Build Vanilla ES6 & SVG Data Visualization
+* **Infrastructure, Testing & Observability:** Docker · Kubernetes · Helm · OpenTelemetry · Prometheus · `cProfile` · Pytest · Mypy / Pyright · Linux · Nginx · GitHub Actions
