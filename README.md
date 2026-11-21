@@ -9,7 +9,7 @@
 
 I design and build high-throughput backend systems, database wire-protocol proxies, developer observability & operations tooling, cross-platform endpoint agents, and AI/vision pipelines — primarily in **Python (FastAPI, Flask, Django)**, **Go**, **PostgreSQL**, and **TypeScript**.
 
-Alongside private enterprise and commercial platforms built under NDA, I author open-source infrastructure and contribute upstream across the Python web, security, and AI ecosystems.
+Alongside private enterprise and commercial platforms built under NDA, I build public open-source infrastructure and developer tools in **Go** and **Python**.
 
 ---
 
@@ -21,20 +21,6 @@ Alongside private enterprise and commercial platforms built under NDA, I author 
 | **[flask-deck](https://github.com/duhanguler/flask-deck)** (`v0.3.0`) | Enterprise Admin & Operations Workbench | Python 3.10+, Flask, SQLAlchemy 2.0, Strict Nonce CSP, Keyset Pagination, TOTP/OIDC, S3, SSE | Fail-closed admin & operations platform (`23.6 KB` gzip total, zero Node build / zero CDN, `0 'unsafe-inline'`): pure-Python RFC 6238 TOTP 2FA & SVG QR generator, PKCE `S256` OIDC SSO, HMAC keyset cursor pagination, S3/local media proxy with magic-byte & decompression-bomb guards, native RTL/i18n (`en`/`tr`/`de`/`ar`), soft-delete trash, revision diffs, live SSE background jobs, interactive schema ERD, Kanban & pure SVG analytics. |
 | **[flask-lens](https://github.com/duhanguler/flask-lens)** | Python Observability & Query Guardrails | Python 3.10+, Flask, SQLAlchemy, `cProfile`, SQLite WAL, SSE, Pytest Plugin, PEP 561 Strict | Two-line Flask DevTools console (`/__lens`) for JSON APIs, HTMX & webhooks (`+0.17ms` SQLAlchemy overhead): automatic SQL N+1 detection with `file:line` callsite attribution, read-only `EXPLAIN` analyzer, zoomable `cProfile` SVG flamegraph, request replay/diff, secret redaction, and Django-style `assert_num_queries` pytest CI guardrails. |
 | **[OMRKit (`omr`)](https://github.com/duhanguler/omr)** (`v2.3.1`) | Computer Vision & EdTech Platform | Python, OpenCV, NumPy, FastAPI, React, TypeScript, ArUco, QR v3, Docker ([PyPI](https://pypi.org/project/omrkit/) · [Live Studio](https://omrkit-studio.onrender.com/)) | Zero-calibration Optical Mark Recognition engine & 6-language Web Studio: 3-of-4 occluded ArUco 12-point homography recovery, `OMRKIT:v3` QR auto-templating, class-roster mail-merge PDFs, zero-JSON teacher key-sheet scanning, darkness-dominance smudge filtering, Classical Test Theory psychometrics (item difficulty, discrimination & KR-20), Moodle/Canvas LMS exports, and live camera scanner. |
-
----
-
-### Upstream Open-Source Contributions
-
-| Repository | Ecosystem | Contributions & Technical Scope |
-|---|---|---|
-| **[brekkylab/backlot](https://github.com/brekkylab/backlot)** | FastAPI / AI Agent Evaluation Twin | [#1438](https://github.com/brekkylab/backlot/pull/1438) *(Merged)* — Exact leading-integer & decimal-exponent path parsing across 9 numeric GitHub REST routes verified against live `api.github.com`.<br>[#1447](https://github.com/brekkylab/backlot/pull/1447) — Unserved GitHub search query/repository validation (`422 Validation Failed` via `odata.strip_blanks`), API version echo & `search` rate-limit accounting ahead of credential checks. |
-| **[pallets-eco/flask-admin](https://github.com/pallets-eco/flask-admin)** | Pallets / Flask Ecosystem | [#3006](https://github.com/pallets-eco/flask-admin/pull/3006) *(Approved)* — Stop `BaseView._run_view` from masking internal `TypeError` exceptions or double-invoking view methods.<br>[#3005](https://github.com/pallets-eco/flask-admin/pull/3005) — Handle context-sensitive SQLAlchemy column default callables during form scaffolding. |
-| **[pallets-eco/flask-security](https://github.com/pallets-eco/flask-security)** | Pallets / Flask Security & Auth | [#1329](https://github.com/pallets-eco/flask-security/pull/1329) — Security hardening (`#1317`): automatically purge multi-factor recovery codes when 2FA is disabled or the last secondary WebAuthn credential is deleted across all 5 ORM datastores. |
-| **[authlib/authlib](https://github.com/authlib/authlib)** | OAuth 2.0 / OIDC (Flask & Django) | [#1077](https://github.com/authlib/authlib/pull/1077) — Resolve OAuth 2.0 scopes once at the grant/endpoint validation boundary (`BaseGrant.resolve_scope`, `DeviceAuthorizationEndpoint`, `IDJAGGrant`) instead of re-expanding empty resolved scopes inside token generators. |
-| **[strawberry-graphql/strawberry-django](https://github.com/strawberry-graphql/strawberry-django)** | Django / GraphQL ORM Optimizer | [#1001](https://github.com/strawberry-graphql/strawberry-django/pull/1001) — Isolate `perm_context` during queryset optimization so `HasRetvalPerm` checkers do not leak into nested relation prefetches or prematurely mark parent permission contexts safe. |
-| **[wemake-services/django-modern-rest](https://github.com/wemake-services/django-modern-rest)** | Django / Type-Safe REST & OpenAPI | [#1856](https://github.com/wemake-services/django-modern-rest/pull/1856) & [#1857](https://github.com/wemake-services/django-modern-rest/pull/1857) — Support lazy translated routes (`i18n_patterns` / `_PrefixRoutePattern`) and key router OpenAPI path metadata by full `PatternChain`. |
-| **[maldoinc/wireup](https://github.com/maldoinc/wireup)** | Dependency Injection (FastAPI / Django / Flask) | [#157](https://github.com/maldoinc/wireup/pull/157) — Actionable `UnknownServiceRequestedError` diagnostics with equal-weight class/factory `@injectable` remediation snippets and registered qualifier inspection. |
 
 ---
 
